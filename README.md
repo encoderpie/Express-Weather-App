@@ -10,14 +10,14 @@ git clone https://github.com/encoderpie/Express-Weather-App.git
  
 ## Setup
 
-* First install the required packages by typing ```sh npm i ``` in the terminal.
+* First install the required packages by typing ```sh npm i``` in the terminal.
 * Rename the env.example file to .env
 * Get an api key from OpenWeatherMap site and put it in .env file
 
 ## Run
 
 * You can run it by typing ```sh npm start``` in the terminal.
-* If you have not changed the port value from the .env file, your site will be opened at "http://localhost:3000".
+* If you have not changed the port value from the .env file, your site will be opened at http://localhost:3000.
 
 ## Contact
 Bug reports and feedback for:
