@@ -16,6 +16,7 @@ git clone https://github.com/encoderpie/Express-Weather-App.git
 
 ## Run
 
+```cd Express-Weather-App```
 * You can run it by typing ```npm start``` in the terminal.
 * If you have not changed the port value from the .env file, your site will be opened at http://localhost:3000.
 
