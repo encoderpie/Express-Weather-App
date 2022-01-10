@@ -1,0 +1,26 @@
+{
+   "name": "expressjs-weather-api",
+   "version": "1.0.0",
+   "description": "A Weather app using OpenWeatherMap api and Expressjs",
+   "main": "app.js",
+   "dependencies": {
+     "dotenv": "^10.0.0",
+     "ejs": "^3.1.6",
+     "express": "^4.17.2",
+     "locale": "^0.1.0",
+     "nodemon": "^2.0.15"
+   },
+   "engines": {
+     "node": "16.x"
+   },
+   "scripts": {
+     "start": "nodemon app.js"
+   },
+   "keywords": [
+     "openweatherapi",
+     "expressjs"
+   ],
+   "author": "Kadir (encoderpie)",
+   "license": "MIT"
+ }
+ 
