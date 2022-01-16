@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+body {
+   margin: 0;
+   background-color: rgb(235, 223, 223);
+   font-family: 'Nunito', sans-serif;
+}
+
+.err_text {
+   text-align: center;
+}
+
+.err_text p {
+   text-align: center;
+   padding: 3px;
+   background-color: rgb(247, 247, 247);
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   text-shadow: rgb(143, 145, 247) 1px 1px 10px;
+}

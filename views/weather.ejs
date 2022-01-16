@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%-include('./inc/head')%>
+  <title>Weather for <%=city%></title>
+</head>
+<body>
+   <%-include('./inc/header')%>
+   <section class="main">
+      <p style="font-size: 12px; margin-bottom: 3px;">INSTANT STATUS</p>
+      <div class="weather-information-box">
+         <p class="w-info-country_city">Weather for <%=country%>, <%=city%></p>
+         <img class="w-info-weather" title="<%=weather%>" src="<%=weatherIcon%>">
+         <br><br>
+         <p class="w-info-temp"><%=temp%>°</p>
+      </div>
+      <div class="w-info-datas-box">
+         <table>
+            <tr>
+               <td><img class="w-info-data-icon" src="./assets/humidity.png"></td>
+               <td>Humidity</td>
+               <td></td>
+               <td>%<%=humidity%></td>
+             </tr>
+            <tr>
+              <td><img class="w-info-data-icon" src="./assets/cloud.png"></td>
+              <td>Cloudiness</td>
+              <td></td>
+              <td><%=cloudiness%>%</td>
+            </tr>
+            <tr>
+              <td><img class="w-info-data-icon" src="./assets/sun.png"></td>
+              <td>Sunrise & Sunset</td>
+              <td></td>
+              <td><%=sunrise%> & <%=sunset%></td>
+            </tr>
+            <tr>
+              <td><img class="w-info-data-icon" src="./assets/wind.png"></td>
+              <td>Wind Speed & Degree</td>
+              <td></td>
+              <td><%=wind_speed%> m/s & <%=wind_deg%>°</td>
+            </tr>
+            <tr>
+               <td><img class="w-info-data-icon" src="./assets/pressure.png"></td>
+               <td>Pressure</td>
+               <td style="text-align: right; padding: 0px 10px;">Atmospheric:  
+                  <%if (sea_level_hPa !== undefined && grnd_level_hPa !== undefined) {%>
+                     <br>Sea Level:
+                     <br>Ground Level:
+                  <%}%>
+               </td>
+               <td><%=atmospher_hPa%>
+                  <%if (sea_level_hPa !== undefined && grnd_level_hPa !== undefined) {%>
+                     <br><%=sea_level_hPa%>
+                     <br><%=grnd_level_hPa%>
+                  <%}%>
+               </td>
+            </tr>
+            <tr>
+              <td><img class="w-info-data-icon" src="./assets/coord.png"></td>
+              <td>Coords</td>
+              <td style="text-align: right; padding: 0px 10px;">Latitude<br>Longitude</td>
+              <td><%=coord_lat%><br><%=coord_lon%></td>
+            </tr>
+          </table>
+      </div>
+   </section>
+</body>
+</html>

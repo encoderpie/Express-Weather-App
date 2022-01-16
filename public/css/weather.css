@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+body {
+   margin: 0;
+   background-color: rgb(235, 223, 223);
+   font-family: 'Nunito', sans-serif;
+}
+
+/*Main Section*/
+.main {
+   margin-left: 3em;
+}
+
+.weather-information-box {
+   width: 530px;
+   height: 100px;
+   background-color: rgb(247, 247, 247);
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   border-radius: 5px 5px 0px 0px;
+   padding: 1px 14px 1px 23px;
+}
+
+.w-info-country_city {
+   float: left;
+   text-shadow: rgb(110, 112, 255) 2px 2px 10px;
+}
+
+.w-info-weather {
+   float: right;
+   background-color: rgb(209, 208, 208);
+   border-radius: 50%;
+   margin-top: 10px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   cursor: pointer;
+}
+
+.w-info-temp {
+   position: absolute;
+   font-size: 30px;
+   margin: 5px 19px;
+   text-shadow: rgb(143, 145, 247) 1px 1px 10px;
+}
+
+.w-info-datas-box {
+   margin-top: 1.5px;
+   width: 530px;
+   background-color: rgb(247, 247, 247);
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   border-radius: 0px 0px 5px 5px;
+   padding: 10px 18.5px;
+   padding-bottom: 18px;
+}
+
+/*Data table apperance*/
+table {
+   border-collapse: collapse;
+   width: 100%;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   border-radius: 5px;
+}
+ 
+td, th {
+   text-shadow: rgb(143, 145, 247) 1px 1px 10px;
+   border-bottom: 1.2px solid #e0e0e0;
+   text-align: left;
+   padding: 3px;
+}
+ 
+tr:nth-child(even) {
+   background-color: #ebe7e7;
+}
+
+.w-info-data-icon {
+   margin: 5px 0px 0px 7px;
+   height: 25px;
+}

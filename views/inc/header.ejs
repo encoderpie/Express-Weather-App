@@ -1,0 +1,82 @@
+<header>
+   <a href="/">
+      <img class="icon" src="https://openweathermap.org/img/wn/04n.png">
+      <p class="site-name">Weather</p>
+   </a>
+   <p class="site-name-description">Developed by <a href="https://github.com/encoderpie" target="_blank">Encoderpie</a></p>
+   <div class="search-box">
+      <input onchange="goToCity();" type="search" placeholder="Search city" name="search" id="search">
+      <button onclick="goToCity();" type="submit"><img src="./assets/search.png" style="margin-top: 3px;" height="24px"></button>
+      <script>
+         function goToCity() {
+            console.log("a")
+            var city = document.getElementById("search").value;
+            window.location.href = "./weather?city=" + city;
+         }
+      </script>
+   </div>
+</header>
+
+<style>
+/*Header*/
+header {
+   width: 100%;
+   height: 50px;
+   background-color: rgb(247, 247, 247);
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.icon {
+   float: left;
+   cursor: pointer;
+}
+
+.site-name {
+   float: left;
+   margin-top: 14px;
+   cursor: pointer;
+}
+
+.site-name-description {
+   float: left;
+   margin-left: 5px;
+   margin-top: 19px;
+   font-size: 11px;
+}
+
+/*Search box*/
+.search-box {
+   float: right;
+   margin-top: 10px;
+   margin-right: 10px;
+}
+
+.search-box input {
+   height: 32px;
+   border: none;
+   padding: 0px 10px;
+   border-radius: 5px 0px 0px 5px;
+   background: rgb(235, 232, 232);
+   font-family: 'Nunito', sans-serif;
+}
+
+.search-box button {
+   float: right;
+   background: #ddd;
+   border-radius: 0px 5px 5px 0px;
+   border: none;
+   transition: 0.2s;
+   cursor: pointer;
+}
+
+.search-box button:hover {
+   transition: 0.2s;
+   background: rgb(189, 188, 188);
+}
+
+@media only screen and (max-width: 490px) {
+   .search-box {
+      display: none;
+   }
+}
+</style>
