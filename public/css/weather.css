@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 body {
    margin: 0;
-   background-color: rgb(235, 223, 223);
+   background-color: var(--backg-color);
    font-family: 'Nunito', sans-serif;
+   color: var(--text-color);
 }
 
 /*Main Section*/
@@ -13,7 +14,7 @@ body {
 .weather-information-box {
    width: 530px;
    height: 100px;
-   background-color: rgb(247, 247, 247);
+   background-color: var(--panel-bg);
    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
    border-radius: 5px 5px 0px 0px;
    padding: 1px 14px 1px 23px;
@@ -21,15 +22,13 @@ body {
 
 .w-info-country_city {
    float: left;
-   text-shadow: rgb(110, 112, 255) 2px 2px 10px;
+   text-shadow: var(--text-shadow-color) 2px 2px 10px;
 }
 
 .w-info-weather {
    float: right;
-   background-color: rgb(209, 208, 208);
-   border-radius: 50%;
+   filter: drop-shadow(0px 0px 4px rgba(80, 80, 80, 0.4));
    margin-top: 10px;
-   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
    cursor: pointer;
 }
 
@@ -37,13 +36,13 @@ body {
    position: absolute;
    font-size: 30px;
    margin: 5px 19px;
-   text-shadow: rgb(143, 145, 247) 1px 1px 10px;
+   text-shadow: var(--text-shadow-color) 1px 1px 10px;
 }
 
 .w-info-datas-box {
    margin-top: 1.5px;
    width: 530px;
-   background-color: rgb(247, 247, 247);
+   background-color: var(--panel-bg);
    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
    border-radius: 0px 0px 5px 5px;
    padding: 10px 18.5px;
@@ -54,22 +53,23 @@ body {
 table {
    border-collapse: collapse;
    width: 100%;
-   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
    border-radius: 5px;
 }
  
 td, th {
-   text-shadow: rgb(143, 145, 247) 1px 1px 10px;
-   border-bottom: 1.2px solid #e0e0e0;
+   text-shadow: var(--text-shadow-color) 1px 1px 10px;
+   border-bottom: 1.2px solid var(--table-border-color);
    text-align: left;
    padding: 3px;
 }
  
 tr:nth-child(even) {
-   background-color: #ebe7e7;
+   background-color: var(--table-layer-color);
 }
 
 .w-info-data-icon {
    margin: 5px 0px 0px 7px;
    height: 25px;
+   filter: drop-shadow(0px 0px 7px rgb(0 0 0 / 0.4));
 }

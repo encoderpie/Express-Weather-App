@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%-include('./inc/head')%>
+   <%-include('./inc/head')%>
   <title>Weather for <%=city%></title>
 </head>
 <body>
@@ -17,31 +17,56 @@
       <div class="w-info-datas-box">
          <table>
             <tr>
-               <td><img class="w-info-data-icon" src="./assets/humidity.png"></td>
+               <td>
+                  <picture>
+                     <source srcset="./assets/assets-for-dark-mode/humidity.png" media="(prefers-color-scheme: dark)">
+                     <img class="w-info-data-icon" src="./assets/assets-for-light-mode/humidity.png">
+                  </picture>
+               </td>
                <td>Humidity</td>
                <td></td>
                <td>%<%=humidity%></td>
              </tr>
             <tr>
-              <td><img class="w-info-data-icon" src="./assets/cloud.png"></td>
-              <td>Cloudiness</td>
-              <td></td>
-              <td><%=cloudiness%>%</td>
+               <td>
+                  <picture>
+                     <source srcset="./assets/assets-for-dark-mode/cloud.png" media="(prefers-color-scheme: dark)">
+                     <img class="w-info-data-icon" src="./assets/assets-for-light-mode/cloud.png">
+                  </picture>
+               </td>
+               <td>Cloudiness</td>
+               <td></td>
+               <td><%=cloudiness%>%</td>
             </tr>
             <tr>
-              <td><img class="w-info-data-icon" src="./assets/sun.png"></td>
-              <td>Sunrise & Sunset</td>
-              <td></td>
-              <td><%=sunrise%> & <%=sunset%></td>
+              <td>
+                  <picture>
+                     <source srcset="../assets/assets-for-dark-mode/sun.png" media="(prefers-color-scheme: dark)">
+                     <img class="w-info-data-icon" src="../assets/assets-for-light-mode/sun.png">
+                  </picture>
+               </td>
+               <td>Sunrise & Sunset</td>
+               <td></td>
+               <td><%=sunrise%> & <%=sunset%></td>
             </tr>
             <tr>
-              <td><img class="w-info-data-icon" src="./assets/wind.png"></td>
-              <td>Wind Speed & Degree</td>
-              <td></td>
-              <td><%=wind_speed%> m/s & <%=wind_deg%>°</td>
+               <td>
+                  <picture>
+                     <source srcset="./assets/assets-for-dark-mode/wind.png" media="(prefers-color-scheme: dark)">
+                     <img class="w-info-data-icon" src="./assets/assets-for-light-mode/wind.png">
+                  </picture>
+               </td>
+               <td>Wind Speed & Degree</td>
+               <td></td>
+               <td><%=wind_speed%> m/s & <%=wind_deg%>°</td>
             </tr>
             <tr>
-               <td><img class="w-info-data-icon" src="./assets/pressure.png"></td>
+               <td>
+                  <picture>
+                     <source srcset="./assets/assets-for-dark-mode/pressure.png" media="(prefers-color-scheme: dark)">
+                     <img class="w-info-data-icon" src="./assets/assets-for-light-mode/pressure.png">
+                  </picture>
+               </td>
                <td>Pressure</td>
                <td style="text-align: right; padding: 0px 10px;">Atmospheric:  
                   <%if (sea_level_hPa !== undefined && grnd_level_hPa !== undefined) {%>
@@ -57,10 +82,15 @@
                </td>
             </tr>
             <tr>
-              <td><img class="w-info-data-icon" src="./assets/coord.png"></td>
-              <td>Coords</td>
-              <td style="text-align: right; padding: 0px 10px;">Latitude<br>Longitude</td>
-              <td><%=coord_lat%><br><%=coord_lon%></td>
+               <td>
+                  <picture>
+                     <source srcset="./assets/assets-for-dark-mode/coord.png" media="(prefers-color-scheme: dark)">
+                     <img class="w-info-data-icon" src="./assets/assets-for-light-mode/coord.png">
+                  </picture>
+               </td>
+               <td>Coords</td>
+               <td style="text-align: right; padding: 0px 10px;">Latitude<br>Longitude</td>
+               <td><%=coord_lat%><br><%=coord_lon%></td>
             </tr>
           </table>
       </div>

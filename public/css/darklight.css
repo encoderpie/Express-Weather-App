@@ -1,0 +1,29 @@
+/* Default Light theme colors */
+:root {
+   --backg-color: rgb(235, 223, 223);
+   --panel-bg: rgb(247, 247, 247);
+   --text-color: black;
+   --text-shadow-color: rgb(125, 127, 255);
+   --table-layer-color: #ebe7e7;
+   --table-border-color: #e0e0e0;
+   --search-backg-color: rgb(235, 232, 232);
+   --search-shadow-color: #ecebeb;
+   --search-button-hover-backg-color: rgb(201, 201, 201);
+   --w-info-weather-backg-color: rgb(209, 208, 208);
+}
+
+/* Dark theme colors */
+@media(prefers-color-scheme: dark) {
+   :root {
+      --backg-color: rgb(94, 94, 94);
+      --panel-bg: rgb(82, 82, 82);
+      --text-color: #fff;
+      --text-shadow-color: rgb(98 98 98);
+      --table-layer-color: #585858;
+      --table-border-color: 424242;
+      --search-backg-color: rgb(73, 73, 73);
+      --search-shadow-color: rgb(75, 73, 73);
+      --search-button-hover-backg-color: rgb(95, 95, 95);
+      --w-info-weather-backg-color: rgb(90, 89, 89);
+   }
+}

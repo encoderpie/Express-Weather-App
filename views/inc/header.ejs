@@ -6,10 +6,16 @@
    <p class="site-name-description">Developed by <a href="https://github.com/encoderpie" target="_blank">Encoderpie</a></p>
    <div class="search-box">
       <input onchange="goToCity();" type="search" placeholder="Search city" name="search" id="search">
-      <button onclick="goToCity();" type="submit"><img src="./assets/search.png" style="margin-top: 3px;" height="24px"></button>
+      <button onclick="goToCity();" type="submit">
+         <td>
+            <picture>
+               <source srcset="./assets/assets-for-dark-mode/search.png" media="(prefers-color-scheme: dark)">
+               <img src="./assets/assets-for-light-mode/search.png" style="margin-top: 3px;" height="24px">
+            </picture>
+         </td>
+      </button>
       <script>
          function goToCity() {
-            console.log("a")
             var city = document.getElementById("search").value;
             window.location.href = "./weather?city=" + city;
          }
@@ -22,19 +28,23 @@
 header {
    width: 100%;
    height: 50px;
-   background-color: rgb(247, 247, 247);
+   background-color: var(--panel-bg);
    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+   
 .icon {
    float: left;
    cursor: pointer;
 }
-
+   
 .site-name {
    float: left;
    margin-top: 14px;
    cursor: pointer;
+}
+   
+a:-webkit-any-link {
+   color: var(--text-color);
 }
 
 .site-name-description {
@@ -43,37 +53,38 @@ header {
    margin-top: 19px;
    font-size: 11px;
 }
-
+   
 /*Search box*/
 .search-box {
    float: right;
    margin-top: 10px;
+   box-shadow: var(--search-shadow-color) 0px 0px 10px;
    margin-right: 10px;
 }
-
+   
 .search-box input {
    height: 32px;
    border: none;
    padding: 0px 10px;
    border-radius: 5px 0px 0px 5px;
-   background: rgb(235, 232, 232);
+   background: var(--search-backg-color);
    font-family: 'Nunito', sans-serif;
 }
-
+   
 .search-box button {
    float: right;
-   background: #ddd;
+   background: var(--search-backg-color);
    border-radius: 0px 5px 5px 0px;
    border: none;
    transition: 0.2s;
    cursor: pointer;
 }
-
+   
 .search-box button:hover {
    transition: 0.2s;
-   background: rgb(189, 188, 188);
+   background-color: var(--search-button-hover-backg-color);
 }
-
+   
 @media only screen and (max-width: 490px) {
    .search-box {
       display: none;
